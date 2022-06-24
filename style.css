@@ -49,3 +49,152 @@
 }
 
 /* --------------real-css-starts from here-------- */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-weight: var(--font-bold);
+}
+h1,h2,h3,p{
+    line-height: 140%;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.container{
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+.section{
+padding: 4.5rem 0 2rem;
+}
+.section-title{
+    position: relative;
+    font-size: var(--h1-font-size);
+    padding-left: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+.section-title::before{
+    content: ' ';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 3px;
+    height: 20px;
+    background-color: var(--first-color);
+}
+
+/* -----------------header and nav----------------- */
+
+.header{
+    width: 100%;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo,
+.nav-toggle{
+color: #fff;
+}
+
+ .nav-logo{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: var(--font-bold);
+}
+ 
+.nav-logo-img{
+    width: 0.75rem;
+}
+.nav-toggle{
+    display: inline-flex;
+    font-size: 1.15rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+    .nav-menu{
+        position: fixed;
+        background-color: var(--black-color);
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+    }
+    
+}
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 3rem;
+    padding-top: 9rem;
+}
+
+.nav-link{
+    text-transform: uppercase;
+    color: var(--text-color-light);
+    font-size: var(--h2-font-size);
+    transition: 0.3s;
+}
+.nav-link:hover{
+    color: #fff;
+}
+.nav-close{
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.show-menu{
+    right: 0;
+}
+
