@@ -56,6 +56,7 @@
     margin: 0;
 }
 
+
 html{
     scroll-behavior: smooth;
 }
@@ -120,7 +121,7 @@ padding: 4.5rem 0 2rem;
 
 .header{
     width: 100%;
-    background: #000;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
@@ -198,3 +199,84 @@ color: #fff;
     right: 0;
 }
 
+.scroll-header{
+    background: var(--body-color);
+    box-shadow: 0 1px 4px hsla(0, 4%, 15%, 0.1);
+    transition: 0.3s background ease-in;
+}
+
+.scroll-header .nav-logo,
+.scroll-header .nav-toggle{
+    color: var(--title-color);
+}
+
+.scroll-header .nav-logo-img{
+    mix-blend-mode: difference;
+}
+/* ---------------------------------------------- */
+
+.home{
+    gap: 0;
+}
+.home-container{
+    padding: 7rem 0 2.5rem;
+    background: linear-gradient(
+                160deg,
+                hsla(206, 5%, 24%, 1) -4%,
+                  hsla(206, 12%, 12%, 1) 46%);
+}
+
+.home-content{
+    position: relative;
+}
+.home-title,
+.home-data-title{
+    color: #fff;
+}
+.home-title{
+    font-size: var(--biggest-font-size);
+    margin-bottom: 1.5rem;
+}
+.home-title span{
+    color: var(--first-color);
+}
+.home-description{
+    margin-bottom: 2rem;
+}
+.home-data{
+    border-top: 1px solid var(--text-color);
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+}
+.home-data-number{
+    color: var(--first-color);
+    font-size: var(--h1-font-size);
+    margin-bottom: 1.5rem;
+}
+.home-data-title{
+    font-size: var(--h3-font-size);
+    margin-bottom: 0.5rem;
+}
+.home-scroll{
+    position: absolute;
+    width: 100px;
+    bottom: -7rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    animation: scroll 3s infinite;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-0.5rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
