@@ -37,3 +37,14 @@ const navMenu = document.querySelector('#nav-menu'),
     }
   
     window.addEventListener('scroll',scrollHeader);
+
+    // ---------------------------------------------------------
+
+    let mixerProducts = mixitup('.products-content',{
+      selectors:{
+        target: '.products-card'
+      },
+      animation:{
+        duration: 300
+      }
+    });
