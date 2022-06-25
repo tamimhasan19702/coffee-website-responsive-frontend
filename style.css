@@ -405,3 +405,7 @@ color: #fff;
 .products-card:hover .products-img{
     transform: translateY(-0.35rem);
 }
+
+.active-product .products-title{
+    color: var(--title-color);
+}

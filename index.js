@@ -48,3 +48,14 @@ const navMenu = document.querySelector('#nav-menu'),
         duration: 300
       }
     });
+
+    mixerProducts.filter('.delicacies');
+
+    const linkProducts = document.querySelectorAll('.products-item');
+
+    function activeProduct(){
+      linkProducts.forEach(l => l.classList.remove('active-product'))
+      this.classList.add('active-product')
+    }
+
+    linkProducts.forEach( l => l.addEventListener('click', activeProduct))
