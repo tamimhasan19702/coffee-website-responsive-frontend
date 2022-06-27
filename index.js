@@ -58,4 +58,17 @@ const navMenu = document.querySelector('#nav-menu'),
       this.classList.add('active-product')
     }
 
-    linkProducts.forEach( l => l.addEventListener('click', activeProduct))
+    linkProducts.forEach( l => l.addEventListener('click', activeProduct));
+
+
+    // ---------------------------------------------------------------------------
+
+     function scrollUp(){
+      const scrollUp = document.querySelector('#scrollup');
+      if(this.scrollY >= 350) {
+        scrollUp.classList.add('show-scroll');
+      } else {
+        scrollUp.classList.remove('show-scroll');
+      } 
+    }
+      window.addEventListener('scroll', scrollUp)
