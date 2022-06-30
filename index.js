@@ -94,4 +94,15 @@ const navMenu = document.querySelector('#nav-menu'),
           }
         })
       }
-      window.addEventListener('scroll',scrollActive)
+      window.addEventListener('scroll',scrollActive);
+
+
+      // -------------------------------------------------------
+
+      onload = () => {
+       const load = document.querySelector('#load'); 
+
+       setTimeout(()=>{
+        load.style.display = 'none'
+       }, 2500)
+      }

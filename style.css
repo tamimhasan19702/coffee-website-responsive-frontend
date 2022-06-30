@@ -957,5 +957,24 @@ font-size: var(--h1-font-size);
         margin-left: auto;
         margin-right: auto;
     }
-    
+
 }
+
+
+/* ------------------------------------------------ */
+
+.load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0 , 0%, 99%);
+    display: grid;
+    place-items: center;
+    z-index: 1000;
+ }
+
+ .load-gif{
+    width: 210px;
+ }
