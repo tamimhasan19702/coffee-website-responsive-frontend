@@ -933,7 +933,7 @@ font-size: var(--h1-font-size);
 
 }
 
-@media screen and(min-width: 1200px){
+@media screen and (min-width: 1200px){
     .home-container{
         padding-top: 10rem; 
     }
@@ -951,7 +951,7 @@ font-size: var(--h1-font-size);
     }
 }
 
-@media screen  and(min-width: 1700px){
+@media screen  and (min-width: 1700px){
     .home{
         max-width: 1400px;
         margin-left: auto;
